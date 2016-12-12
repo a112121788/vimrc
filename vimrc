@@ -1,11 +1,9 @@
 " Vundle vim插件管理
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -45,13 +43,9 @@ Plugin 'honza/vim-snippets'
 
 Plugin 'rizzatti/dash.vim'
 
-" Plugin 'L9'
-" Plugin 'newL9'
-" Plugin 'majutsushi/tabular'
 Plugin 'vim-bundler'
 Plugin 'vim-indent-guides'
 Plugin 'vim-javascript-syntax'
-"Plugin 'vim-markdown'
 
 Plugin 'elixir-lang/vim-elixir'
 
@@ -78,13 +72,12 @@ Plugin 'git://git.wincent.com/command-t.git'
 
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -111,7 +104,6 @@ endif
 
 " Set syntax highlighting for specific file types
 autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 
 " 主题
@@ -125,8 +117,6 @@ let g:rehash256 = 1
 " Backspace deletes like most programs in insert mode
 set backspace=2
 
-" Show the cursor position all the time
-set ruler
 
 " Display incomplete commands
 set showcmd
@@ -149,15 +139,13 @@ set colorcolumn=+1
 
 " Numbers
 set number
-set numberwidth=7
+set numberwidth=5
 
 set matchpairs+=<:>
-set hlsearch
 
 " 设置字体
 " set guifont=Monaco:h16
-set guifont=Inconsolata-g:h18
-
+set guifont=Inconsolata-g:h16
 
 
 " 用浅色高亮当前行
@@ -176,8 +164,6 @@ set confirm
 " Tab键的宽度
 set tabstop=2
 " 统一缩进为2
-"set softtabstop=2
-set shiftwidth=2
 
 " 用空格代替制表符
 set expandtab
@@ -242,7 +228,6 @@ else
 endif
 
 set cuc
-"" ......................插件设置 begin.........................
 
 
 "" ......................插件设置 begin.........................
@@ -285,24 +270,20 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
+" NERD tree
 " 显示行号
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 " 是否显示隐藏文件
 let NERDTreeShowHidden=0
 " 设置宽度
-let NERDTreeWinSize=31
+let NERDTreeWinSize=28
 " 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 " 忽略一下文件的显示
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-" 显示书签列表
-let NERDTreeShowBookmarks=1
-
-" NERD tree
 let NERDChristmasTree=0
-let NERDTreeWinSize=35
-let NERDTreeChDirMode=2
+let NERDTreeChDirMode=1
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeShowBookmarks=1
 let NERDTreeWinPos="left"
@@ -320,6 +301,3 @@ set foldenable
 " 标志折叠
 set foldmethod=marker
 
-
-" emmet 快捷键
-"" ......................插件设置 begin.........................
